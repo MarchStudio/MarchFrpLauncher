@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="FrpcPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MarchFrpLauncher.Main"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <ScrollViewer>
+            <Grid x:Name="Grid" VerticalAlignment="Top">
+            </Grid>
+        </ScrollViewer>
+        <TextBlock x:Name="lb_Refresh" Foreground="#FF0070EA" Text="refresh" FontSize="20" Margin="20 10 0 0" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>
