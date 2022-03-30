@@ -46,6 +46,7 @@ Public Class LoginBox
 
         Me.Apisel.Items.Add("OGFrp官方Api")
         Me.Apisel.Items.Add("OpenFrp官方Api")
+        Me.Apisel.Items.Add("木韩Frp官方Api")
         Me.Apisel.Items.Add("LightPowerFrp官方Api")
         Me.Apisel.Items.Add("自定义Api")
         If Config.Apiweb.Val = "api.ogfrp.cn" Then
@@ -54,6 +55,10 @@ Public Class LoginBox
             Me.Apiwebbox.IsReadOnly = True
         ElseIf Config.Apiweb.Val = "api.openfrp.net" Then
             Me.Apisel.Text = "OpenFrp官方Api"
+            Me.Apiwebbox.Text = Config.Apiweb.Val
+            Me.Apiwebbox.IsReadOnly = True
+        ElseIf Config.Apiweb.Val = "frp.mcbebbs.cn/api" Then
+            Me.Apisel.Text = "木韩Frp官方Api"
             Me.Apiwebbox.Text = Config.Apiweb.Val
             Me.Apiwebbox.IsReadOnly = True
         ElseIf Config.Apiweb.Val = "frp.lightpower.top/api" Then
@@ -184,6 +189,10 @@ Public Class LoginBox
                 Me.Apiwebbox.IsReadOnly = True
             Case "OpenFrp官方Api"
                 Config.Apiweb.Val = "api.openfrp.net"
+                Me.Apiwebbox.Text = Config.Apiweb.Val
+                Me.Apiwebbox.IsReadOnly = True
+            Case "木韩Frp官方Api"
+                Config.Apiweb.Val = "frp.mcbebbs.cn/api"
                 Me.Apiwebbox.Text = Config.Apiweb.Val
                 Me.Apiwebbox.IsReadOnly = True
             Case "LightPowerFrp官方Api"
